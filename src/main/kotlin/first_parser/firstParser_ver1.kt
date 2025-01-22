@@ -6,12 +6,9 @@ import org.jsoup.nodes.Document
 fun main() {
 
     val doc: Document = Jsoup.connect(URL).get()
-    val quotes = doc.select("p")
+    val qotes = doc.select(".sc-2aegk7-2.bzpNIu")
 
-    for (quote in quotes) println("${quote.text()}\n")
+    for (qote in qotes) println("${qote.text()}\n")
 }
 
-const val URL = "https://citaty.info/book/duglas-adams/restoran-u-konca-vselennoi"
-
-
-
+const val URL = "https://mybook.ru/author/duglas-adams/avtostopom-po-galaktike-restoran-u-konca-vselennoj/citations/"
