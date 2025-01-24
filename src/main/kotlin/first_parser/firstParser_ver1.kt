@@ -6,7 +6,7 @@ import org.jsoup.nodes.Document
 fun main() {
 
     val doc: Document = Jsoup.connect(URL).get()
-    val qotes = doc.select(".sc-14uz67c-0.ccmjFA")
+    val qotes = doc.select("article")
 
     for (qote in qotes) println("${qote.text()}\n")
 }
